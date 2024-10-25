@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Ludo</string>
+
+    <string name="profile_desc">Profile icon</string>
+    <string name="settings_desc">Setting icon</string>
+    <string name="home_button_desc">Home button</string>
+
+    <string name="ludo_background">Wooden Color for Background</string>
+    <string name="ludo_board_background">ludo_board</string>
+    <string name="splash_screen">Splash Screen</string>
+
+    <string name="player_setup">Player Setup</string>
+    <string name="_2_players">2 Players</string>
+    <string name="_3_players">3 Players</string>
+    <string name="_4_players">4 Players</string>
+    <string name="enter_player_2_name">Enter Player 2 Name</string>
+    <string name="enter_player_1_name">Enter Player 1 Name</string>
+    <string name="enter_player_3_name">Enter Player 3 Name</string>
+    <string name="enter_player_4_name">Enter Player 4 Name</string>
+    <string name="start_game_button">Start Game</string>
+
+    <string name="roll_dice">Roll Dice</string>
+
+    <string name="red_token">Red Token</string>
+    <string name="green_token">Green Token</string>
+    <string name="yellow_token">Yellow Token</string>
+    <string name="blue_token">Blue Token</string>
+
+    <string name="player_1">Player 1</string>
+    <string name="player_2">Player 2</string>
+    <string name="player_3">Player 3</string>
+    <string name="player_4">Player 4</string>
+    <string name="backgroundimage">BackgroundImage</string>
+
+</resources>

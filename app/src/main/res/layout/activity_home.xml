@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/top_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/topBarColor">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!-- Profile Icon -->
+            <ImageButton
+                android:id="@+id/profile_icon"
+                android:layout_width="75dp"
+                android:layout_height="45dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:contentDescription="@string/profile_desc"
+                android:src="@drawable/profile_icon"
+                android:background="@null"
+                android:scaleType="fitCenter"/>
+
+            <!-- Settings Icon -->
+            <ImageButton
+                android:id="@+id/settings_icon"
+                android:layout_width="35dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="0dp"
+                android:contentDescription="@string/settings_desc"
+                android:src="@drawable/setting"
+                android:scaleType="fitCenter"
+                android:background="@null"/>
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_bar"
+        android:layout_above="@+id/bottom_nav_bar"
+        android:contentDescription="@string/backgroundimage"
+        android:scaleType="centerCrop"
+        android:src="@drawable/home_background" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/wooden_ludo"
+            android:layout_width="wrap_content"
+            android:layout_height="500dp"
+            android:src="@drawable/wooden_ludo_image"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:layout_marginBottom="30dp"/>
+
+        <ImageButton
+            android:id="@+id/playButton"
+            android:layout_width="167dp"
+            android:layout_height="170dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="150dp"
+            android:layout_marginStart="10dp"
+            android:background="@null"
+            android:contentDescription="@string/start_game_button"
+            android:scaleType="fitCenter"
+            android:src="@drawable/play_game" />
+    </FrameLayout>
+
+    <!-- Bottom Navigation Bar -->
+    <RelativeLayout
+        android:id="@+id/bottom_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="@color/topBarColor">
+
+        <ImageButton
+            android:id="@+id/home_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/home_button_desc"
+            android:src="@drawable/home_icon"
+            android:scaleType="fitCenter"/>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constraint_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LudoBoard">
+
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/ludo_background"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- Ludo Board -->
+    <ImageView
+        android:id="@+id/ludo_board"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/ludo_board_background"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"
+        android:layout_gravity="center"
+        android:src="@drawable/board"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <!-- Red Player's Name -->
+    <TextView
+        android:id="@+id/red_player_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/player_1"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/ludo_board"
+        app:layout_constraintEnd_toEndOf="@id/ludo_board"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="10dp"/>
+
+    <!-- Red Dice -->
+
+    <ImageButton
+        android:id="@+id/diceRed"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="15dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/roll_dice"
+        android:scaleType="fitXY"
+        android:src="@drawable/dice_one"
+        app:layout_constraintStart_toEndOf="@id/red_player_name"
+        app:layout_constraintTop_toTopOf="@id/red_player_name"
+        app:layout_constraintBottom_toBottomOf="@id/red_player_name"/>
+
+<!--Red Tokens -->
+    <ImageView
+        android:id="@+id/red_token1"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:contentDescription="@string/red_token"
+        android:src="@drawable/red_token"
+        app:layout_constraintStart_toStartOf="@id/ludo_board"
+        app:layout_constraintTop_toTopOf="@+id/ludo_board"
+        android:layout_marginStart="268dp"
+        android:layout_marginTop="75dp"/>
+
+    <ImageView
+        style="@style/RedToken"
+        android:id="@+id/red_token2"
+        android:src="@drawable/red_token"
+        android:contentDescription="@string/red_token"
+        app:layout_constraintStart_toStartOf="@+id/ludo_board"
+        app:layout_constraintTop_toTopOf="@+id/ludo_board"
+        android:layout_marginStart="292dp"
+        android:layout_marginTop="51dp"
+        android:clickable="true"/>
+
+    <ImageView
+        style="@style/RedToken"
+        android:id="@+id/red_token3"
+        android:src="@drawable/red_token"
+        android:contentDescription="@string/red_token"
+        app:layout_constraintStart_toStartOf="@+id/ludo_board"
+        app:layout_constraintTop_toTopOf="@+id/ludo_board"
+        android:layout_marginStart="317dp"
+        android:layout_marginTop="75dp"
+        android:clickable="true"/>
+
+    <ImageView
+        style="@style/RedToken"
+        android:id="@+id/red_token4"
+        android:src="@drawable/red_token"
+        android:contentDescription="@string/red_token"
+        app:layout_constraintStart_toStartOf="@+id/ludo_board"
+        app:layout_constraintTop_toTopOf="@+id/ludo_board"
+        android:layout_marginStart="293dp"
+        android:layout_marginTop="100dp"
+        android:clickable="true"/>
+
+<!--   Green-->
+    <TextView
+        android:id="@+id/green_player_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="250dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/player_2"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/ludo_board"
+        app:layout_constraintEnd_toEndOf="@id/ludo_board" />
+
+    <ImageButton
+        android:id="@+id/diceGreen"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="15dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/roll_dice"
+        android:scaleType="fitXY"
+        android:src="@drawable/dice_one"
+        app:layout_constraintEnd_toStartOf="@id/green_player_name"
+        app:layout_constraintTop_toTopOf="@id/green_player_name"
+        app:layout_constraintBottom_toBottomOf="@id/green_player_name"/>
+
+    <ImageView
+        style="@style/TokenStyle"
+        android:id="@+id/green_token1"
+        android:src="@drawable/green_token"
+        android:contentDescription="@string/green_token"
+        app:layout_constraintStart_toStartOf="@+id/ludo_board"
+        app:layout_constraintTop_toTopOf="@+id/ludo_board"
+        android:layout_marginStart="99dp"
+        android:layout_marginTop="75dp"
+        android:clickable="true"/>
+
+    <ImageView
+        style="@style/TokenStyle"
+        android:id="@+id/green_token2"
+        android:src="@drawable/green_token"
+        android:contentDescription="@string/green_token"
+        app:layout_constraintStart_toStartOf="@+id/ludo_board"
+        app:layout_constraintTop_toTopOf="@+id/ludo_board"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="50dp"
+        android:clickable="true"/>
+
+    <ImageView
+        style="@style/TokenStyle"
+        android:id="@+id/green_token3"
+        android:src="@drawable/green_token"
+        android:contentDescription="@string/green_token"
+        app:layout_constraintStart_toStartOf="@+id/ludo_board"
+        app:layout_constraintTop_toTopOf="@+id/ludo_board"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="75dp"
+        android:clickable="true"/>
+
+    <ImageView
+        style="@style/TokenStyle"
+        android:id="@+id/green_token4"
+        android:src="@drawable/green_token"
+        android:contentDescription="@string/green_token"
+        app:layout_constraintStart_toStartOf="@+id/ludo_board"
+        app:layout_constraintTop_toTopOf="@+id/ludo_board"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="99dp"
+        android:clickable="true"/>
+
+
+<!--   Yellow-->
+    <TextView
+        android:id="@+id/yellow_player_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="250dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/player_3"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/ludo_board"
+        app:layout_constraintEnd_toEndOf="@id/ludo_board" />
+
+    <ImageButton
+        android:id="@+id/diceYellow"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="15dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/roll_dice"
+        android:scaleType="fitXY"
+        android:src="@drawable/dice_one"
+        app:layout_constraintEnd_toStartOf="@id/yellow_player_name"
+        app:layout_constraintTop_toBottomOf="@id/yellow_player_name"
+        app:layout_constraintBottom_toBottomOf="@id/yellow_player_name"/>
+
+    <ImageView
+        style="@style/TokenStyle"
+        android:id="@+id/yellow_token1"
+        android:src="@drawable/yellow_token"
+        android:contentDescription="@string/yellow_token"
+        app:layout_constraintStart_toStartOf="@+id/ludo_board"
+        app:layout_constraintTop_toTopOf="@+id/ludo_board"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="267dp"/>
+
+    <ImageView
+        style="@style/TokenStyle"
+        android:id="@+id/yellow_token2"
+        android:src="@drawable/yellow_token"
+        android:contentDescription="@string/yellow_token"
+        app:layout_constraintStart_toStartOf="@+id/ludo_board"
+        app:layout_constraintTop_toTopOf="@+id/ludo_board"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="292dp"/>
+
+    <ImageView
+        style="@style/TokenStyle"
+        android:id="@+id/yellow_token3"
+        android:src="@drawable/yellow_token"
+        android:contentDescription="@string/yellow_token"
+        app:layout_constraintStart_toStartOf="@+id/ludo_board"
+        app:layout_constraintTop_toTopOf="@+id/ludo_board"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="315dp"/>
+
+    <ImageView
+        style="@style/TokenStyle"
+        android:id="@+id/yellow_token4"
+        android:src="@drawable/yellow_token"
+        android:contentDescription="@string/yellow_token"
+        app:layout_constraintStart_toStartOf="@+id/ludo_board"
+        app:layout_constraintTop_toTopOf="@+id/ludo_board"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="292dp"/>
+
+
+<!--    Blue -->
+    <TextView
+        android:id="@+id/blue_player_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/player_4"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/ludo_board"
+        app:layout_constraintEnd_toEndOf="@id/ludo_board"
+        android:layout_marginEnd="80dp"
+        android:layout_marginTop="10dp"/>
+
+    <ImageButton
+        android:id="@+id/diceBlue"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/roll_dice"
+        android:scaleType="fitXY"
+        android:src="@drawable/dice_one"
+        app:layout_constraintStart_toEndOf="@id/blue_player_name"
+        app:layout_constraintTop_toBottomOf="@id/blue_player_name"
+        app:layout_constraintBottom_toBottomOf="@id/blue_player_name"/>
+
+    <ImageView
+        style="@style/TokenStyle"
+        android:id="@+id/blue_token1"
+        android:src="@drawable/blue_token"
+        android:contentDescription="@string/blue_token"
+        app:layout_constraintStart_toStartOf="@+id/ludo_board"
+        app:layout_constraintTop_toTopOf="@+id/ludo_board"
+        android:layout_marginStart="292dp"
+        android:layout_marginTop="267dp"/>
+
+    <ImageView
+        style="@style/TokenStyle"
+        android:id="@+id/blue_token2"
+        android:src="@drawable/blue_token"
+        android:contentDescription="@string/blue_token"
+        app:layout_constraintStart_toStartOf="@+id/ludo_board"
+        app:layout_constraintTop_toTopOf="@+id/ludo_board"
+        android:layout_marginStart="268dp"
+        android:layout_marginTop="292dp"/>
+
+    <ImageView
+        style="@style/TokenStyle"
+        android:id="@+id/blue_token3"
+        android:src="@drawable/blue_token"
+        android:contentDescription="@string/blue_token"
+        app:layout_constraintStart_toStartOf="@+id/ludo_board"
+        app:layout_constraintTop_toTopOf="@+id/ludo_board"
+        android:layout_marginStart="292dp"
+        android:layout_marginTop="316dp"/>
+
+    <ImageView
+        style="@style/TokenStyle"
+        android:id="@+id/blue_token4"
+        android:src="@drawable/blue_token"
+        android:contentDescription="@string/blue_token"
+        app:layout_constraintStart_toStartOf="@+id/ludo_board"
+        app:layout_constraintTop_toTopOf="@+id/ludo_board"
+        android:layout_marginStart="316dp"
+        android:layout_marginTop="292dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

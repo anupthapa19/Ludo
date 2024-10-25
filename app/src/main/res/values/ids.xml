@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="ludo_board" type="id"/>
+    <item name="player1_name" type="id"/>
+    <item name="player2_name" type="id"/>
+    <item name="player3_name" type="id"/>
+    <item name="player4_name" type="id"/>
+    <item name="diceYellow" type="id"/>
+</resources>

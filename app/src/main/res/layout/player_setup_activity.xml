@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background_image"
+        tools:ignore="ContentDescription" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <!-- Title Text -->
+        <TextView
+            android:id="@+id/setupTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/player_setup"
+            android:textSize="25sp"
+            android:textColor="@color/colorWhite"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+        <!-- Player Mode Selection -->
+        <RadioGroup
+            android:id="@+id/playerModeGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="20dp">
+
+            <RadioButton
+                android:id="@+id/twoPlayerMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_2_players"
+                android:textColor="@color/colorWhite"/>
+
+            <RadioButton
+                android:id="@+id/threePlayerMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_3_players"
+                android:textColor="@color/colorWhite"/>
+
+            <RadioButton
+                android:id="@+id/fourPlayerMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_4_players"
+                android:textColor="@color/colorWhite"/>
+        </RadioGroup>
+
+        <!-- Player Token and Name Inputs -->
+        <LinearLayout
+            android:id="@+id/playersContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp">
+
+            <!-- Player 1 Row -->
+            <LinearLayout
+                android:id="@+id/player1Row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="17dp">
+
+                <ImageView
+                    android:id="@+id/player1Token"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_red_token" />
+                <EditText
+                    android:id="@+id/player1Name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/enter_player_1_name" />
+
+            </LinearLayout>
+            <!-- Example Player 2 Row -->
+            <LinearLayout
+                android:id="@+id/player2Row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="17dp">
+
+                <ImageView
+                    android:id="@+id/player2Token"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_green_token" />
+
+                <EditText
+                    android:id="@+id/player2Name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/enter_player_2_name" />
+
+            </LinearLayout>
+            <!-- Example Player 3 Row -->
+            <LinearLayout
+                android:id="@+id/player3Row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="17dp">
+
+                <ImageView
+                    android:id="@+id/player3Token"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_yellow_token" />
+
+                <EditText
+                    android:id="@+id/player3Name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/enter_player_3_name" />
+
+            </LinearLayout>
+       <!--Payer 4 row-->
+            <LinearLayout
+                android:id="@+id/player4Row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="17dp">
+
+                <ImageView
+                    android:id="@+id/player4Token"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_blue_token" />
+
+                <EditText
+                    android:id="@+id/player4Name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/enter_player_4_name" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Start Game Button -->
+        <ImageButton
+            android:id="@+id/startGameButton"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/start_game_button"
+            android:scaleType="fitCenter"
+            android:background="@null"
+            android:backgroundTint="@android:color/transparent"
+            android:src="@drawable/start_game"
+            android:layout_marginTop="50dp"/>
+    </LinearLayout>
+
+</FrameLayout>
